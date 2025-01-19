@@ -1,13 +1,16 @@
-function ProductsList({Products}){
+function ProductsList({products}){
     return(
 <div>
  <ul>
-{Products.map((Products)=>(
-    <li key={Products.id}>
-        {Products.name} - {Products.price}
+{products.map((products)=>(
+    <li className="productslist"    key={products.id}>
+        {products.name} - {products.price}
+         <button className="Checkout">Checkout</button>
+
     </li>
 ))}
 </ul>
+
 </div>
 
 

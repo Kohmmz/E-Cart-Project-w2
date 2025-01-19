@@ -1,7 +1,7 @@
 import ProductsList from './components/ProductList'
 
 function App() {
-  const Products = [
+  const products = [
 
     { "id": 1, "name": "T-Shirt", "price": 20 },
 
@@ -18,8 +18,8 @@ function App() {
 
   return (
     <>
-   <ProductsList Products={Products}/>
-   
+   <ProductsList products={products}/>
+
 
     </>
   )

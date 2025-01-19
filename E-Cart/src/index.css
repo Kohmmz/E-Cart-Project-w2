@@ -1,0 +1,10 @@
+.productslist{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.Checkout{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
