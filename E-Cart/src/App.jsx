@@ -1,5 +1,5 @@
 import ProductsList from './components/ProductList'
-
+import Navbar from './components/Navbar'
 function App() {
   const products = [
 
@@ -17,11 +17,13 @@ function App() {
 
 
   return (
-    <>
+    <div>
+   <Navbar  products ={products.length}/>
    <ProductsList products={products}/>
 
 
-    </>
+
+    </div>
   )
 
 }
