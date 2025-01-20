@@ -67,3 +67,47 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     font-weight: bold;
     margin-left: -48rem;
 }
+
+.Cart {
+    margin-right: 18rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(240, 241, 240);
+
+    margin-left: 2rem;
+
+}
+.Cart:hover{
+    box-shadow: 0 8px 16px 0 rgba(7, 7, 7, 0.397);
+}
+.Carth1{
+   background-color: rgb(53, 53, 53);
+   padding:auto;
+   padding-right: 5rem;
+   color: #33ff00;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-radius: 5px;
+   margin-bottom: 1rem;
+
+}
+.Cart button{
+    background-color: rgb(0, 255, 0);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+
+}
+.Cart button:hover{
+    box-shadow: 0 8px 16px 0 rgba(7, 7, 7, 0.397);
+}
+
+.Total{
+    padding-bottom: 0%
+}

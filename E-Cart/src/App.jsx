@@ -14,11 +14,11 @@ const products = [
 function App() {
   const [cart, setCart] = useState([]);
 
-  // Update the cart size and manage items
+  // Update the cart size when a product is added
   const handleClick = (product) => {
     const existingProduct = cart.find((item) => item.id === product.id);
     if (existingProduct) {
-      // Update quantity if product already exists in cart
+         // Update the quantity of the existing product
       setCart(
         cart.map((item) =>
           item.id === product.id
@@ -27,19 +27,43 @@ function App() {
         )
       );
     } else {
-      // Add new product to cart
+       // Add a new product to the cart
       setCart([...cart, { ...product, quantity: 1 }]);
     }
   };
 
-  // Calculate the total cart size
+
+//Remove a product from cart
+const handleRemove = (product) =>{
+setCart(cart.filter((item)=> item.id !== product.id)
+)}
+ // Adjust the quantity of a product in the cart
+ const handleQuantityChange = (product, action) => {
+  setCart(
+    cart.map((item) =>
+      item.id === product.id
+        ? {
+            ...item,
+            quantity:
+              action === "increase"
+                ? item.quantity + 1
+                : item.quantity > 1
+                ? item.quantity - 1
+                : 1,
+          }
+        : item
+    )
+  );
+};
+
   const cartSize = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
     <div>
-      <Navbar cartSize={cartSize} /> {/* Pass the correct cart size */}
+      <Navbar cartSize={cartSize} />
       <ProductsList products={products} handleClick={handleClick} />
-      <Cart cart={cart} /> {/* Pass the cart state to the Cart component */}
+      <Cart cart={cart} handleRemove={handleRemove} handleQuantityChange={handleQuantityChange}
+/>
     </div>
   );
 }
