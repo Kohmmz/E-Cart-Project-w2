@@ -8,7 +8,7 @@ function ProductsList({ products, handleClick }) {
         {products.map((product) => (
           <li className="productslist" key={product.id}>
             <img src={img} className="img" alt="Product" />
-            Name: {product.name} Price: ${product.price}
+           <p className='itemname'>Name:{product.name} Price: ${product.price}</p>
             <button className="Checkout" onClick={() => handleClick(product)}>
               Add to Cart
             </button>
